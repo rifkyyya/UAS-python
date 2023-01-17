@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "RIFKY ALIF RIDHO ADITIANTO 21.83.0734",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -34.01,
+      "left": -106.66,
+      "attrs": { "env": "micropython-20210902-v1.17" }
+    },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -19.33, "left": 22, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:3V3", "ultrasonic1:VCC", "red", [ "h27.01", "v45.45", "h68.67", "v24", "h3.33" ] ],
+    [ "pico:GND.5", "ultrasonic1:GND", "black", [ "h13.01", "v63.32", "h142" ] ],
+    [ "pico:GP3", "ultrasonic1:TRIG", "yellow", [ "h-23.99", "v174.79", "h228.67" ] ],
+    [ "pico:GP2", "ultrasonic1:ECHO", "orange", [ "h-42.65", "v221.05", "h263.33", "v2.67" ] ]
+  ],
+  "dependencies": {}
+}
